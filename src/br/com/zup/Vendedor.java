@@ -21,8 +21,10 @@ public class Vendedor extends Pessoa {
 
     @Override
     public String toString() {
-        return "Vendedor{" +
-                "registroVendedor=" + registroVendedor +
-                '}';
+        StringBuilder retorno = new StringBuilder();
+        retorno.append("\n Vendedor \n");
+        retorno.append(super.toString());
+        retorno.append("\n Número de Registro: " + registroVendedor);
+        return retorno.toString();
     }
 }
