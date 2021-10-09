@@ -47,4 +47,14 @@ public class Venda {
     public void setDataDeRegistro(String dataDeRegistro) {
         this.dataDeRegistro = dataDeRegistro;
     }
+
+    @Override
+    public String toString() {
+        return "Venda{" +
+                "vendedorResponsavel=" + vendedorResponsavel +
+                ", cliente=" + cliente +
+                ", valorDaVenda=" + valorDaVenda +
+                ", dataDeRegistro='" + dataDeRegistro + '\'' +
+                '}';
+    }
 }
