@@ -18,4 +18,11 @@ public class Vendedor extends Pessoa {
     public void setRegistroVendedor(int registroVendedor) {
         this.registroVendedor = registroVendedor;
     }
+
+    @Override
+    public String toString() {
+        return "Vendedor{" +
+                "registroVendedor=" + registroVendedor +
+                '}';
+    }
 }
