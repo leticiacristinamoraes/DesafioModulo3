@@ -10,4 +10,12 @@ public class Cliente extends Pessoa {
         super(nome, cpf, email);
         this.renda = renda;
     }
+
+    public double getRenda() {
+        return renda;
+    }
+
+    public void setRenda(double renda) {
+        this.renda = renda;
+    }
 }
