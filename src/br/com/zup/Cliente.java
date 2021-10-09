@@ -18,4 +18,11 @@ public class Cliente extends Pessoa {
     public void setRenda(double renda) {
         this.renda = renda;
     }
+
+    @Override
+    public String toString() {
+        return "Cliente{" +
+                "renda=" + renda +
+                '}';
+    }
 }
