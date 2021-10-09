@@ -10,4 +10,12 @@ public class Vendedor extends Pessoa {
         super(nome, cpf, email);
         this.registroVendedor = registroVendedor;
     }
+
+    public int getRegistroVendedor() {
+        return registroVendedor;
+    }
+
+    public void setRegistroVendedor(int registroVendedor) {
+        this.registroVendedor = registroVendedor;
+    }
 }
