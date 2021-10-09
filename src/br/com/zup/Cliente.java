@@ -21,8 +21,10 @@ public class Cliente extends Pessoa {
 
     @Override
     public String toString() {
-        return "Cliente{" +
-                "renda=" + renda +
-                '}';
+        StringBuilder retorno = new StringBuilder();
+        retorno.append("\n Cliente \n");
+        retorno.append(super.toString());
+        retorno.append("\n Renda: R$" + renda);
+        return retorno.toString();
     }
 }
