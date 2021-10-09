@@ -15,4 +15,12 @@ public class Sistema {
         double renda = receberDados("Informe a renda do cliente:").nextDouble();
         return ServiceCliente.cadastrarCliente(nome, cpf, email, renda);
     }
+
+    public static Vendedor cadastrarVendedor() {
+        String nome = receberDados("Informe o nome do vendedor:").nextLine();
+        String cpf = receberDados("Informe o CPF do vendedor:").nextLine();
+        String email = receberDados("Informe o email do vendedor:").nextLine();
+        int registroVendedor = receberDados("Informe o número de registro do vendedor:").nextInt();
+        return ServiceVendedor.cadastrarVendedor(nome, cpf, email, registroVendedor);
+    }
 }
