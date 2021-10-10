@@ -67,6 +67,8 @@ public class Sistema {
             } else if (opcaoDesejada == 7) {
                 continuarNoMenu = false;
                 System.out.println("Obrigada por utilizar o sistema Você Em Divi Dado. Volte sempre!");
+            } else {
+                System.out.println("Opção inválida! Digite uma das opções exibidas.");
             }
         }
         return continuarNoMenu;
