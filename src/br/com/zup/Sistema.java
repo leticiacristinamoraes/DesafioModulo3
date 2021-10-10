@@ -24,5 +24,4 @@ public class Sistema {
         return ServiceVendedor.cadastrarVendedor(nome, cpf, email, registroVendedor);
     }
 
-
 }
