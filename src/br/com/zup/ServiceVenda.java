@@ -6,9 +6,4 @@ import java.util.List;
 public class ServiceVenda {
     private static List<Venda> vendas = new ArrayList<>();
 
-    public static Venda cadastrarVenda(Vendedor vendedorResponsavel, Cliente cliente, double valorDaVenda, String dataDeRegistro) {
-        Venda novaVenda = new Venda(vendedorResponsavel, cliente, valorDaVenda, dataDeRegistro);
-        vendas.add(novaVenda);
-        return novaVenda;
-    }
 }

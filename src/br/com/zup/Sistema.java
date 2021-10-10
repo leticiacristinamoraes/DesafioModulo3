@@ -23,4 +23,6 @@ public class Sistema {
         int registroVendedor = receberDados("Informe o número de registro do vendedor:").nextInt();
         return ServiceVendedor.cadastrarVendedor(nome, cpf, email, registroVendedor);
     }
+
+
 }

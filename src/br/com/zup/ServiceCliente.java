@@ -11,4 +11,14 @@ public class ServiceCliente {
         listaDeClientes.add(novoCliente);
         return novoCliente;
     }
+
+    //Método para pesquisar um cliente na lista através do CPF
+    public static Cliente pesquisarCpfCliente (String cpf) throws Exception {
+        for (Cliente clienteReferencia: listaDeClientes) {
+            if (clienteReferencia.getCpf().equals(cpf)) {
+                return clienteReferencia;
+            }
+        }
+        throw new Exception("O cliente procurado não se encontra na lista. Tente outro cliente.");
+    }
 }

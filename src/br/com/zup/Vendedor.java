@@ -22,7 +22,7 @@ public class Vendedor extends Pessoa {
     @Override
     public String toString() {
         StringBuilder retorno = new StringBuilder();
-        retorno.append("\n Vendedor \n");
+        retorno.append("\n Informações do Vendedor \n");
         retorno.append(super.toString());
         retorno.append("\n Número de Registro: " + registroVendedor);
         return retorno.toString();
