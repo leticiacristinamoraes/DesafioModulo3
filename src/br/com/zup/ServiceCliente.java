@@ -21,4 +21,12 @@ public class ServiceCliente {
         }
         throw new Exception("Não foi possível cadastrar a venda pois o cliente informado está cadastrado no sistema. Por favor, cadastre o cliente!");
     }
+
+    public static void exibirClientes() {
+        System.out.println("##### Clientes Cadastrados #####");
+
+        for (Cliente clienteReferencia: listaDeClientes) {
+            System.out.println(clienteReferencia);
+        }
+    }
 }
