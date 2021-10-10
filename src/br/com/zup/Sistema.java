@@ -56,6 +56,8 @@ public class Sistema {
                 cadastrarCliente();
             } else if (opcaoDesejada == 2) {
                 cadastrarVendedor();
+            } else if (opcaoDesejada == 3) {
+                ServiceCliente.exibirClientes();
             }
         }
         return continuarNoMenu;
