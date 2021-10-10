@@ -42,4 +42,13 @@ public class Sistema {
         String dataDeRegistro = receberDados("Digite a data que a venda foi efetuada:").nextLine();
         return ServiceVenda.cadastrarVenda(email, cpf, valorDaVenda, dataDeRegistro);
     }
+
+    public static boolean executar() {
+        boolean continuarNoMenu = true;
+
+        while (continuarNoMenu) {
+            menuDeExibicao();
+            int opcaoDesejada = receberDados("\n Digite a opção desejada:").nextInt();
+        }
+    }
 }
