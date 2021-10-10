@@ -8,6 +8,17 @@ public class Sistema {
         return new Scanner(System.in);
     }
 
+    public static void menuDeExibicao() {
+        System.out.println("\n Bem vinde ao sistema Você Em Divi Dado *-* \n");
+        System.out.println("Para cadastrar um cliente              Digite 1");
+        System.out.println("Para cadastrar um vendedor             Digite 2");
+        System.out.println("Para listar os clientes cadastrados    Digite 3");
+        System.out.println("Para listar os vendedores cadastrados  Digite 4");
+        System.out.println("Para cadastrar uma venda               Digite 5");
+        System.out.println("Para listar as vendas cadastradas      Digite 6");
+        System.out.println("Para sair do sistema                   Digite 7");
+    }
+
     public static Cliente cadastrarCliente() {
         String nome = receberDados("Informe o nome do cliente:").nextLine();
         String cpf = receberDados("Informe o CPF do cliente:").nextLine();
