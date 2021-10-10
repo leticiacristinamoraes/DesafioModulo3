@@ -12,4 +12,13 @@ public class ServiceVendedor {
         return novoVendedor;
     }
 
+    //Método para pesquisar um vendedor na lista através do email
+    public static Vendedor pesquisarEmailVendedor (String email) throws Exception {
+        for (Vendedor vendedorReferencia: listaDeVendedores) {
+            if (vendedorReferencia.getEmail().equals(email)) {
+                return vendedorReferencia;
+            }
+        }
+        throw new Exception("O vendedor procurado não se encontra na lista. Tente outro vendedor.");
+    }
 }
