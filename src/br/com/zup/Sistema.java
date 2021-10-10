@@ -62,6 +62,8 @@ public class Sistema {
                 ServiceVendedor.exibirVendedores();
             } else if (opcaoDesejada == 5) {
                 cadastrarVenda();
+            } else if (opcaoDesejada == 6) {
+                ServiceVenda.exibirVendas();
             }
         }
         return continuarNoMenu;
