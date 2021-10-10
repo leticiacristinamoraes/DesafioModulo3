@@ -21,4 +21,12 @@ public class ServiceVendedor {
         }
         throw new Exception("Não foi possível cadastrar a venda pois o vendedor informadoo não está cadastrado no sistema. Por favor, cadastre o vendedor!");
     }
+
+    public static void exibirVendedores() {
+        System.out.println("##### Vendedores Cadastrados #####");
+
+        for (Vendedor vendedorReferencia: listaDeVendedores) {
+            System.out.println(vendedorReferencia);
+        }
+    }
 }
