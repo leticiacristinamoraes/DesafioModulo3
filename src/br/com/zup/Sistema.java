@@ -43,12 +43,20 @@ public class Sistema {
         return ServiceVenda.cadastrarVenda(email, cpf, valorDaVenda, dataDeRegistro);
     }
 
+
+
     public static boolean executar() {
         boolean continuarNoMenu = true;
 
         while (continuarNoMenu) {
             menuDeExibicao();
             int opcaoDesejada = receberDados("\n Digite a opção desejada:").nextInt();
+
+            if (opcaoDesejada == 1) {
+                cadastrarCliente();
+            }
         }
+        return continuarNoMenu;
     }
 }
+

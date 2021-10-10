@@ -6,7 +6,7 @@ public class Main {
 
     public static void main(String[] args) {
         try {
-            Sistema.menuDeExibicao();
+            Sistema.executar();
         } catch (Exception exception) {
             System.out.println(exception.getMessage());
         }
