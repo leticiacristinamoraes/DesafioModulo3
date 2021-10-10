@@ -14,4 +14,11 @@ public class ServiceVenda {
         return novaVenda;
     }
 
+    public static void exibirVendas() {
+        System.out.println("##### Vendas Cadastradas #####");
+
+        for (Venda vendaReferencia: listaDevendas) {
+            System.out.println(vendaReferencia);
+        }
+    }
 }
