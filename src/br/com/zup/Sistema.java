@@ -64,6 +64,9 @@ public class Sistema {
                 cadastrarVenda();
             } else if (opcaoDesejada == 6) {
                 ServiceVenda.exibirVendas();
+            } else if (opcaoDesejada == 7) {
+                continuarNoMenu = false;
+                System.out.println("Obrigada por utilizar o sistema Você Em Divi Dado. Volte sempre!");
             }
         }
         return continuarNoMenu;
