@@ -5,10 +5,13 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        try {
-            Sistema.executar();
-        } catch (Exception exception) {
-            System.out.println(exception.getMessage());
+        boolean continuar = true;
+        while (continuar) {
+            try {
+                continuar = Sistema.executar();
+            } catch (Exception exception) {
+                System.out.println(exception.getMessage());
+            }
         }
     }
 }
