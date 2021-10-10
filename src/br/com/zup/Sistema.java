@@ -24,4 +24,11 @@ public class Sistema {
         return ServiceVendedor.cadastrarVendedor(nome, cpf, email, registroVendedor);
     }
 
+    public static Venda cadastrarVenda() throws Exception {
+        String email = receberDados("Digite o email do vendedor:").nextLine();
+        String cpf = receberDados("Digite o CPF do cliente:").nextLine();
+        double valorDaVenda = receberDados("Digite o valor da venda:").nextDouble();
+        String dataDeRegistro = receberDados("Digite a data que a venda foi efetuada:").nextLine();
+        return ServiceVenda.cadastrarVenda(email, cpf, valorDaVenda, dataDeRegistro);
+    }
 }
