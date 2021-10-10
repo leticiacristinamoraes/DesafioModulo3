@@ -45,7 +45,7 @@ public class Sistema {
 
 
 
-    public static boolean executar() {
+    public static boolean executar() throws Exception {
         boolean continuarNoMenu = true;
 
         while (continuarNoMenu) {
@@ -60,6 +60,8 @@ public class Sistema {
                 ServiceCliente.exibirClientes();
             } else if (opcaoDesejada == 4) {
                 ServiceVendedor.exibirVendedores();
+            } else if (opcaoDesejada == 5) {
+                cadastrarVenda();
             }
         }
         return continuarNoMenu;
