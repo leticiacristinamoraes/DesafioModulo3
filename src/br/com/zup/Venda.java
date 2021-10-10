@@ -51,9 +51,9 @@ public class Venda {
     @Override
     public String toString() {
         StringBuilder retorno = new StringBuilder();
-        retorno.append("\n Detalhamento da Venda \n");
-        retorno.append("\n Vendedor responsável: " + vendedorResponsavel);
-        retorno.append("\n Cliente: " + cliente);
+        retorno.append("\n ##### Detalhamento da Venda ##### \n");
+        retorno.append("\n Vendedor responsável pela venda:" + vendedorResponsavel);
+        retorno.append("\n Cliente efetuador da compra:" + cliente);
         retorno.append("\n Valor da venda: R$" + valorDaVenda);
         retorno.append("\n Data de registro da venda: " + dataDeRegistro);
         return retorno.toString();

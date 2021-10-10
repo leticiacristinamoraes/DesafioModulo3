@@ -19,6 +19,6 @@ public class ServiceCliente {
                 return clienteReferencia;
             }
         }
-        throw new Exception("O cliente procurado não se encontra na lista. Tente outro cliente.");
+        throw new Exception("Não foi possível cadastrar a venda pois o cliente informado está cadastrado no sistema. Por favor, cadastre o cliente!");
     }
 }

@@ -19,6 +19,6 @@ public class ServiceVendedor {
                 return vendedorReferencia;
             }
         }
-        throw new Exception("O vendedor procurado não se encontra na lista. Tente outro vendedor.");
+        throw new Exception("Não foi possível cadastrar a venda pois o vendedor informadoo não está cadastrado no sistema. Por favor, cadastre o vendedor!");
     }
 }
