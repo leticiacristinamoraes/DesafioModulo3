@@ -54,6 +54,8 @@ public class Sistema {
 
             if (opcaoDesejada == 1) {
                 cadastrarCliente();
+            } else if (opcaoDesejada == 2) {
+                cadastrarVendedor();
             }
         }
         return continuarNoMenu;
