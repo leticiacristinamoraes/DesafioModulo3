@@ -45,9 +45,11 @@ public class Sistema {
         return ServiceVenda.cadastrarVenda(email, cpf, valorDaVenda, dataDeRegistro);
     }
 
-    public static List<Venda> exibirComprasPeloCpf() {
-        String cpf = receberDados("Digite o email do cliente que deseja buscar:").nextLine();
-        return ServiceVenda.exibirComprasPeloCpf(cpf);
+    public static List<Venda> exibirComprasPeloCpf() throws Exception {
+        String cpf = receberDados("Digite o CPF do cliente que deseja buscar:").nextLine();
+        ServiceCliente.pesquisarCpfCliente(cpf);
+        List<Venda> comprasDoCliente = ServiceVenda.exibirComprasPeloCpf(cpf);
+        return comprasDoCliente;
     }
 
 
@@ -71,7 +73,9 @@ public class Sistema {
             } else if (opcaoDesejada == 6) {
                 ServiceVenda.exibirVendas();
             } else if (opcaoDesejada == 7) {
-                exibirComprasPeloCpf();
+                List<Venda> comprasDoCliente = exibirComprasPeloCpf();
+                System.out.println("\n Compras do Cliente \n" + comprasDoCliente + "\n");
+
             } else if (opcaoDesejada == 8) {
                 continuarNoMenu = false;
                 System.out.println("Obrigada por utilizar o sistema Você Em Divi Dado. Volte sempre!");

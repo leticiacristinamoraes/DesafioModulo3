@@ -24,12 +24,12 @@ public class ServiceVenda {
 
     //Método para exibir as compras de um  cliente através de seu cpf
     public static List<Venda> exibirComprasPeloCpf(String cpf) {
-        List<Venda> comprasDoCLiente = new ArrayList<>();
+        List<Venda> comprasDoCliente = new ArrayList<>();
         for (Venda vendaReferencia: listaDevendas) {
             if (vendaReferencia.getCliente().getCpf().equals(cpf)) {
-                comprasDoCLiente.add(vendaReferencia);
+                comprasDoCliente.add(vendaReferencia);
             }
         }
-        return comprasDoCLiente;
+        return comprasDoCliente;
     }
 }

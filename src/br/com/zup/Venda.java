@@ -56,6 +56,7 @@ public class Venda {
         retorno.append("\n Cliente efetuador da compra:" + cliente);
         retorno.append("\n Valor da venda: R$" + valorDaVenda);
         retorno.append("\n Data de registro da venda: " + dataDeRegistro);
+        retorno.append("\n **************************** \n");
         return retorno.toString();
     }
 }
