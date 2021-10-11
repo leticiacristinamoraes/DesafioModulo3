@@ -70,28 +70,35 @@ public class Sistema {
 
             if (opcaoDesejada == 1) {
                 cadastrarCliente();
-            } else if (opcaoDesejada == 2) {
+            }
+            else if (opcaoDesejada == 2) {
                 cadastrarVendedor();
-            } else if (opcaoDesejada == 3) {
+            }
+            else if (opcaoDesejada == 3) {
                 ServiceCliente.exibirClientes();
-            } else if (opcaoDesejada == 4) {
+            }
+            else if (opcaoDesejada == 4) {
                 ServiceVendedor.exibirVendedores();
-            } else if (opcaoDesejada == 5) {
+            }
+            else if (opcaoDesejada == 5) {
                 cadastrarVenda();
-            } else if (opcaoDesejada == 6) {
+            }
+            else if (opcaoDesejada == 6) {
                 ServiceVenda.exibirVendas();
-            } else if (opcaoDesejada == 7) {
+            }
+            else if (opcaoDesejada == 7) {
                 List<Venda> comprasDoCliente = exibirComprasPeloCpf();
                 System.out.println("\n Compras do Cliente \n" + comprasDoCliente);
-
-            } else if (opcaoDesejada == 8) {
+            }
+            else if (opcaoDesejada == 8) {
                List<Venda> vendasDoVendedor = exibirVendasPeloEmail();
                 System.out.println("\n Vendas do Vendedor \n" + vendasDoVendedor);
-
-            } else if (opcaoDesejada == 9) {
+            }
+            else if (opcaoDesejada == 9) {
                 continuarNoMenu = false;
                 System.out.println("Obrigada por utilizar o sistema Você Em Divi Dado. Volte sempre!");
-            } else {
+            }
+            else {
                 System.out.println("Opção inválida! Digite uma das opções exibidas.");
             }
         }
