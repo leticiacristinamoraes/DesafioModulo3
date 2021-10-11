@@ -44,7 +44,7 @@ public class ServiceCliente {
     public static void impedirEmailRepetidoCliente(String email) throws Exception {
         for (Cliente clienteReferencia: listaDeClientes) {
             if (clienteReferencia.getEmail().equals(email)) {
-                throw  new Exception("O email informado já está cadastrado! Por favor, digite um novo email");
+                throw  new Exception("O email informado já está cadastrado! Por favor, digite um novo email!");
             }
         }
     }
