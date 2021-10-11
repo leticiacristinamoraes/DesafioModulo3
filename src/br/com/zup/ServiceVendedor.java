@@ -7,6 +7,7 @@ public class ServiceVendedor {
     private static List<Vendedor> listaDeVendedores = new ArrayList<>();
 
     public static Vendedor cadastrarVendedor(String nome, String cpf, String email, int registroVendedor) throws Exception {
+        impedirCpfRepetidoVendedor(cpf);
         validarEmailVendedor(email);
         impedirEmailRepetidoVendedor(email);
         Vendedor novoVendedor = new Vendedor(nome, cpf, email, registroVendedor);
@@ -44,6 +45,15 @@ public class ServiceVendedor {
         for (Vendedor vendedorReferencia: listaDeVendedores) {
             if (vendedorReferencia.getEmail().equals(email)) {
                 throw  new Exception("O email informado já está cadastrado! Por favor, digite um novo email!");
+            }
+        }
+    }
+
+    //Método para impedir cadastros de vendedores com cpfs repetidos
+    public static void impedirCpfRepetidoVendedor(String cpf) throws Exception {
+        for (Vendedor vendedorReferencia: listaDeVendedores) {
+            if (vendedorReferencia.getCpf().equals(cpf)) {
+                throw new Exception("O CPF informado já está cadastrado! Por favor, digite um novo CPF!");
             }
         }
     }
