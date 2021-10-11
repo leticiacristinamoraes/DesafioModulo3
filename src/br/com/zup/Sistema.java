@@ -11,13 +11,14 @@ public class Sistema {
 
     public static void menuDeExibicao() {
         System.out.println("\n Bem vinde ao sistema Você Em Divi Dado *-* \n");
-        System.out.println("Para cadastrar um cliente              Digite 1");
-        System.out.println("Para cadastrar um vendedor             Digite 2");
-        System.out.println("Para listar os clientes cadastrados    Digite 3");
-        System.out.println("Para listar os vendedores cadastrados  Digite 4");
-        System.out.println("Para cadastrar uma venda               Digite 5");
-        System.out.println("Para listar as vendas cadastradas      Digite 6");
-        System.out.println("Para sair do sistema                   Digite 7");
+        System.out.println("Para cadastrar um cliente                             Digite 1");
+        System.out.println("Para cadastrar um vendedor                            Digite 2");
+        System.out.println("Para listar os clientes cadastrados                   Digite 3");
+        System.out.println("Para listar os vendedores cadastrados                 Digite 4");
+        System.out.println("Para cadastrar uma venda                              Digite 5");
+        System.out.println("Para listar as vendas cadastradas                     Digite 6");
+        System.out.println("Para buscar as compras de um cliente utilizando o CPF Digite 7");
+        System.out.println("Para sair do sistema                                  Digite 8");
     }
 
     public static Cliente cadastrarCliente() throws Exception {
@@ -50,7 +51,6 @@ public class Sistema {
     }
 
 
-
     public static boolean executar() throws Exception {
         boolean continuarNoMenu = true;
 
@@ -71,6 +71,8 @@ public class Sistema {
             } else if (opcaoDesejada == 6) {
                 ServiceVenda.exibirVendas();
             } else if (opcaoDesejada == 7) {
+                exibirComprasPeloCpf();
+            } else if (opcaoDesejada == 8) {
                 continuarNoMenu = false;
                 System.out.println("Obrigada por utilizar o sistema Você Em Divi Dado. Volte sempre!");
             } else {
