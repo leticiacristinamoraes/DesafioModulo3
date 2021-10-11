@@ -15,7 +15,7 @@ public class ServiceCliente {
         return novoCliente;
     }
 
-    //Método para pesquisar um cliente na lista através do CPF
+    //Método para pesquisar se um cliente já está cadastrado na lista através do CPF
     public static Cliente pesquisarCpfCliente(String cpf) throws Exception {
         for (Cliente clienteReferencia : listaDeClientes) {
             if (clienteReferencia.getCpf().equals(cpf)) {

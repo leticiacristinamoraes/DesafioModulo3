@@ -10,6 +10,7 @@ public class ServiceVendedor {
         impedirCpfRepetidoVendedor(cpf);
         validarEmailVendedor(email);
         impedirEmailRepetidoVendedor(email);
+        impedirNumeroRegistroRepetido(registroVendedor);
         Vendedor novoVendedor = new Vendedor(nome, cpf, email, registroVendedor);
         listaDeVendedores.add(novoVendedor);
         return novoVendedor;
@@ -54,6 +55,15 @@ public class ServiceVendedor {
         for (Vendedor vendedorReferencia: listaDeVendedores) {
             if (vendedorReferencia.getCpf().equals(cpf)) {
                 throw new Exception("O CPF informado já está cadastrado! Por favor, digite um novo CPF!");
+            }
+        }
+    }
+
+    //Método para impedir cadastro do número de registro do vendedor repetidos
+    public static void impedirNumeroRegistroRepetido(int registroVendedor) throws Exception {
+        for (Vendedor registroReferencia: listaDeVendedores) {
+            if (registroReferencia.getRegistroVendedor() == (registroVendedor)) {
+                throw new Exception("Esse número de registro já pertence a um vendedor. Por favor, verifique o número de registro e tente novamente!");
             }
         }
     }

@@ -18,7 +18,7 @@ public class Sistema {
         System.out.println("Para cadastrar uma venda                                Digite 5");
         System.out.println("Para listar as vendas cadastradas                       Digite 6");
         System.out.println("Para buscar as compras de um cliente utilizando o CPF   Digite 7");
-        System.out.println("Para buscar as vendas de um vendedor utiliando o email  Digite 8");
+        System.out.println("Para buscar as vendas de um vendedor utilizando o email Digite 8");
         System.out.println("Para sair do sistema                                    Digite 9");
     }
 
