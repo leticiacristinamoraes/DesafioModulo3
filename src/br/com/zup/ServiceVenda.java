@@ -21,4 +21,15 @@ public class ServiceVenda {
             System.out.println(vendaReferencia);
         }
     }
+
+    //Método para exibir as compras de um  cliente através de seu cpf
+    public static List<Venda> exibirComprasPeloCpf(String cpf) {
+        List<Venda> comprasDoCLiente = new ArrayList<>();
+        for (Venda vendaReferencia: listaDevendas) {
+            if (vendaReferencia.getCliente().getCpf().equals(cpf)) {
+                comprasDoCLiente.add(vendaReferencia);
+            }
+        }
+        return comprasDoCLiente;
+    }
 }

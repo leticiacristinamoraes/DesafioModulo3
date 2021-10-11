@@ -1,5 +1,6 @@
 package br.com.zup;
 
+import java.util.List;
 import java.util.Scanner;
 
 public class Sistema {
@@ -41,6 +42,11 @@ public class Sistema {
         double valorDaVenda = receberDados("Digite o valor da venda:").nextDouble();
         String dataDeRegistro = receberDados("Digite a data que a venda foi efetuada:").nextLine();
         return ServiceVenda.cadastrarVenda(email, cpf, valorDaVenda, dataDeRegistro);
+    }
+
+    public static List<Venda> exibirComprasPeloCpf() {
+        String cpf = receberDados("Digite o email do cliente que deseja buscar:").nextLine();
+        return ServiceVenda.exibirComprasPeloCpf(cpf);
     }
 
 
