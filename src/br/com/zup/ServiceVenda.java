@@ -32,4 +32,15 @@ public class ServiceVenda {
         }
         return comprasDoCliente;
     }
+
+    //Método para exibir as vendas de um vendedor através de seu email
+    public static List<Venda> exibirVendasPeloEmail(String email) {
+        List<Venda> vendasDoVendedor = new ArrayList<>();
+        for (Venda vendaVendedor: listaDevendas) {
+            if (vendaVendedor.getVendedorResponsavel().getEmail().equals(email)) {
+                vendasDoVendedor.add(vendaVendedor);
+            }
+        }
+        return vendasDoVendedor;
+    }
 }

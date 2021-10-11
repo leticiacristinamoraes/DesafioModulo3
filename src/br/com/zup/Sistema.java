@@ -52,6 +52,13 @@ public class Sistema {
         return comprasDoCliente;
     }
 
+    public static List<Venda> exibirVendasPeloEmail() throws Exception {
+        String email = receberDados("Digite o email do vendedor que deseja buscar:").nextLine();
+       ServiceVendedor.pesquisarEmailVendedor(email);
+        List<Venda> vendasDoVendedor = ServiceVenda.exibirVendasPeloEmail(email);
+        return vendasDoVendedor;
+    }
+
 
     public static boolean executar() throws Exception {
         boolean continuarNoMenu = true;
