@@ -88,7 +88,9 @@ public class Sistema {
             }
             else if (opcaoDesejada == 7) {
                 List<Venda> comprasDoCliente = exibirComprasPeloCpf();
-                System.out.println("\n Compras do Cliente \n" + comprasDoCliente);
+                System.out.println("\n Compras do Cliente");
+                System.out.println("\n Total de compras realizadas: " + comprasDoCliente.size());
+                System.out.println("\n" + comprasDoCliente);
             }
             else if (opcaoDesejada == 8) {
                List<Venda> vendasDoVendedor = exibirVendasPeloEmail();
