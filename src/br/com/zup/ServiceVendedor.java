@@ -6,7 +6,8 @@ import java.util.List;
 public class ServiceVendedor {
     private static List<Vendedor> listaDeVendedores = new ArrayList<>();
 
-    public static Vendedor cadastrarVendedor(String nome, String cpf, String email, int registroVendedor) {
+    public static Vendedor cadastrarVendedor(String nome, String cpf, String email, int registroVendedor) throws Exception {
+        validarEmailVendedor(email);
         Vendedor novoVendedor = new Vendedor(nome, cpf, email, registroVendedor);
         listaDeVendedores.add(novoVendedor);
         return novoVendedor;
@@ -27,6 +28,12 @@ public class ServiceVendedor {
 
         for (Vendedor vendedorReferencia: listaDeVendedores) {
             System.out.println(vendedorReferencia);
+        }
+    }
+
+    public static void validarEmailVendedor(String email) throws Exception {
+        if (!email.contains("@")) {
+            throw new Exception("Por favor, digite um email válido!");
         }
     }
 }
