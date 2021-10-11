@@ -94,7 +94,9 @@ public class Sistema {
             }
             else if (opcaoDesejada == 8) {
                List<Venda> vendasDoVendedor = exibirVendasPeloEmail();
-                System.out.println("\n Vendas do Vendedor \n" + vendasDoVendedor);
+                System.out.println("\n Vendas do Vendedor");
+                System.out.println("\n Total de vendas realizadas: " + vendasDoVendedor.size());
+                System.out.println("\n" + vendasDoVendedor);
             }
             else if (opcaoDesejada == 9) {
                 continuarNoMenu = false;
