@@ -11,14 +11,15 @@ public class Sistema {
 
     public static void menuDeExibicao() {
         System.out.println("\n Bem vinde ao sistema Você Em Divi Dado *-* \n");
-        System.out.println("Para cadastrar um cliente                             Digite 1");
-        System.out.println("Para cadastrar um vendedor                            Digite 2");
-        System.out.println("Para listar os clientes cadastrados                   Digite 3");
-        System.out.println("Para listar os vendedores cadastrados                 Digite 4");
-        System.out.println("Para cadastrar uma venda                              Digite 5");
-        System.out.println("Para listar as vendas cadastradas                     Digite 6");
-        System.out.println("Para buscar as compras de um cliente utilizando o CPF Digite 7");
-        System.out.println("Para sair do sistema                                  Digite 8");
+        System.out.println("Para cadastrar um cliente                               Digite 1");
+        System.out.println("Para cadastrar um vendedor                              Digite 2");
+        System.out.println("Para listar os clientes cadastrados                     Digite 3");
+        System.out.println("Para listar os vendedores cadastrados                   Digite 4");
+        System.out.println("Para cadastrar uma venda                                Digite 5");
+        System.out.println("Para listar as vendas cadastradas                       Digite 6");
+        System.out.println("Para buscar as compras de um cliente utilizando o CPF   Digite 7");
+        System.out.println("Para buscar as vendas de um vendedor utiliando o email  Digite 8");
+        System.out.println("Para sair do sistema                                    Digite 9");
     }
 
     public static Cliente cadastrarCliente() throws Exception {
@@ -81,9 +82,13 @@ public class Sistema {
                 ServiceVenda.exibirVendas();
             } else if (opcaoDesejada == 7) {
                 List<Venda> comprasDoCliente = exibirComprasPeloCpf();
-                System.out.println("\n Compras do Cliente \n" + comprasDoCliente + "\n");
+                System.out.println("\n Compras do Cliente \n" + comprasDoCliente);
 
             } else if (opcaoDesejada == 8) {
+               List<Venda> vendasDoVendedor = exibirVendasPeloEmail();
+                System.out.println("\n Vendas do Vendedor \n" + vendasDoVendedor);
+
+            } else if (opcaoDesejada == 9) {
                 continuarNoMenu = false;
                 System.out.println("Obrigada por utilizar o sistema Você Em Divi Dado. Volte sempre!");
             } else {
