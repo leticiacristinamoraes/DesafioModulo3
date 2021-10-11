@@ -19,7 +19,7 @@ public class Sistema {
         System.out.println("Para sair do sistema                   Digite 7");
     }
 
-    public static Cliente cadastrarCliente() {
+    public static Cliente cadastrarCliente() throws Exception {
         String nome = receberDados("Informe o nome do cliente:").nextLine();
         String cpf = receberDados("Informe o CPF do cliente:").nextLine();
         String email = receberDados("Informe o email do cliente:").nextLine();

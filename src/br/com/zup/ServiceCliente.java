@@ -6,15 +6,16 @@ import java.util.List;
 public class ServiceCliente {
     private static List<Cliente> listaDeClientes = new ArrayList<>();
 
-    public static Cliente cadastrarCliente(String nome, String cpf, String email, double renda) {
+    public static Cliente cadastrarCliente(String nome, String cpf, String email, double renda) throws Exception {
+        validarEmailCliente(email);
         Cliente novoCliente = new Cliente(nome, cpf, email, renda);
         listaDeClientes.add(novoCliente);
         return novoCliente;
     }
 
     //Método para pesquisar um cliente na lista através do CPF
-    public static Cliente pesquisarCpfCliente (String cpf) throws Exception {
-        for (Cliente clienteReferencia: listaDeClientes) {
+    public static Cliente pesquisarCpfCliente(String cpf) throws Exception {
+        for (Cliente clienteReferencia : listaDeClientes) {
             if (clienteReferencia.getCpf().equals(cpf)) {
                 return clienteReferencia;
             }
@@ -25,8 +26,15 @@ public class ServiceCliente {
     public static void exibirClientes() {
         System.out.println("##### Clientes Cadastrados #####");
 
-        for (Cliente clienteReferencia: listaDeClientes) {
+        for (Cliente clienteReferencia : listaDeClientes) {
             System.out.println(clienteReferencia);
+        }
+    }
+
+    //Método para não permitir cadastro de emails sem @
+    public static void validarEmailCliente(String email) throws Exception {
+        if (!email.contains("@")) {
+            throw new Exception("Por favor, digite um email válido!");
         }
     }
 }
