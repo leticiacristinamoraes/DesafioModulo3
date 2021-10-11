@@ -8,6 +8,7 @@ public class ServiceCliente {
 
     public static Cliente cadastrarCliente(String nome, String cpf, String email, double renda) throws Exception {
         validarEmailCliente(email);
+        impedirEmailRepetidoCliente(email);
         Cliente novoCliente = new Cliente(nome, cpf, email, renda);
         listaDeClientes.add(novoCliente);
         return novoCliente;
@@ -34,7 +35,16 @@ public class ServiceCliente {
     //Método para não permitir cadastro de emails sem @
     public static void validarEmailCliente(String email) throws Exception {
         if (!email.contains("@")) {
-            throw new Exception("Por favor, digite um email válido!");
+            throw new Exception("Não foi possível cadastrar o cliente. Por favor, digite um email válido!");
+        }
+    }
+
+    //Método para impedir cadastros de emails repetidos
+    public static void impedirEmailRepetidoCliente(String email) throws Exception {
+        for (Cliente clienteReferencia: listaDeClientes) {
+            if (clienteReferencia.getEmail().equals(email)) {
+                throw  new Exception("O email informado já está cadastrado! Por favor, digite um novo email");
+            }
         }
     }
 }

@@ -33,7 +33,7 @@ public class ServiceVendedor {
 
     public static void validarEmailVendedor(String email) throws Exception {
         if (!email.contains("@")) {
-            throw new Exception("Por favor, digite um email válido!");
+            throw new Exception("Não foi possível cadastrar o vendedor. Por favor, digite um email válido!");
         }
     }
 }
